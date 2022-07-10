@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌞 Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link href="index.css" rel="stylesheet" />
+
+    <script
+      src="https://kit.fontawesome.com/a63fdb1e4d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Gruppo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="card w-50 card50">
+      <div class="card-body">
+        <button class="geoguesser" id="geoguesser-id">
+          Let me guess your city!
+        </button>
+
+        <span class="current-time" id="time">Time</span>
+        <form id="searching-city-tool">
+          <input
+            type="search"
+            class="search-bar"
+            id="search-tool"
+            placeholder="Type a city"
+          />
+          <button class="search-one"><img src="search.png" /></button>
+        </form>
+        <h2 class="current-city" id="city-in-question">Current City</h2>
+        <p class="exact-day">Friday</p>
+        <input
+          type="button"
+          class="tempButton"
+          id="tempButtonID"
+          value="°C to °F"
+        />
+        <p class="exact-temp" id="exact-temp-id">20°</p>
+        <span class="details-exact-day"
+          >wind: <span id="wind">10</span>km\h<br />humidity:
+          <span id="humidity">42</span>%
+        </span>
+        <div class="container">
+          <div class="day">
+            Tomorrow<br /><span class="next-temp">20°</span><br /><span
+              class="next-weather"
+              >Sunny</span
+            ><br /><span class="next-emoji"
+              ><i class="fa-solid fa-sun"></i
+            ></span>
+          </div>
+          <div class="day">
+            Sunday<br /><span class="next-temp">18°</span><br /><span
+              class="next-weather"
+              >Rain</span
+            ><br /><span class="next-emoji"
+              ><i class="fa-solid fa-cloud-showers-heavy"></i
+            ></span>
+          </div>
+          <div class="day">
+            Monday<br /><span class="next-temp">21°</span><br /><span
+              class="next-weather"
+              >Cloudy</span
+            ><br /><span class="next-emoji"
+              ><i class="fa-solid fa-cloud"></i
+            ></span>
+          </div>
+          <div class="day">
+            Tuesday<br /><span class="next-temp">17°</span><br /><span
+              class="next-weather"
+              >Wind</span
+            ><br /><span class="next-emoji"
+              ><i class="fa-solid fa-wind"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <footer class="made-by">
+        App was made by
+        <a href="https://github.com/takifug4" target="_blank" class="link-by"
+          >takifug4</a
+        >
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
