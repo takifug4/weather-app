@@ -32,7 +32,7 @@ function showTemperature(response) {
       .addEventListener("click", function () {
         if (count == 0) {
           let farTemp = `${temperature}` * 1.8 + 32;
-          thatTemp.innerHTML = `${farTemp}°F`;
+          thatTemp.innerHTML = `${farTemp.toFixed(1)}°F`;
           count++;
         } else if (count == 1) {
           thatTemp.innerHTML = `${temperature}°`;
@@ -81,7 +81,7 @@ function showTemperatureGeo(response) {
       .addEventListener("click", function () {
         if (count == 0) {
           let farTemp = `${temperature}` * 1.8 + 32;
-          thatTemp.innerHTML = `${farTemp}°F`;
+          thatTemp.innerHTML = `${farTemp.toFixed(1)}°F`;
           count++;
         } else if (count == 1) {
           thatTemp.innerHTML = `${temperature}°`;
