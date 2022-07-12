@@ -19,7 +19,7 @@ function showTemperature(response) {
   let windOne = document.querySelector("#wind");
   let currentWind = Math.round(response.data.wind.speed);
   windOne.innerHTML = currentWind;
-
+  console.log(response);
   let humidityOne = document.querySelector("#humidity");
   let currentHumidity = Math.round(response.data.main.humidity);
   humidityOne.innerHTML = currentHumidity;
