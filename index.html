@@ -28,45 +28,38 @@
     />
   </head>
   <body>
-    <div class="card w-50 card50">
-      <div class="card-body">
-        <button class="geoguesser" id="geoguesser-id">
-          Let me guess your city!
-        </button>
+    <div class="container-main">
+      <button class="geoguesser" id="geoguesser-id">
+        Let me guess your city!
+      </button>
 
-        <span class="current-time" id="time">Time</span>
-        <form id="searching-city-tool">
-          <input
-            type="search"
-            class="search-bar"
-            id="search-tool"
-            placeholder="Type a city"
-          />
-          <button class="search-one"><img src="search.png" /></button>
-        </form>
-        <h2 class="current-city" id="city-in-question">Current City</h2>
-        <p class="exact-day">Friday</p>
+      <form id="searching-city-tool">
+        <input
+          type="search"
+          class="search-bar"
+          id="search-tool"
+          placeholder="Type a city"
+        />
+        <button class="search-one">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <h2 class="current-city" id="city-in-question">Current City</h2>
+      <p class="current-time" id="time">Time</p>
+      <form id="temp-changer-button">
         <input
           type="button"
           class="tempButton"
           id="tempButtonID"
           value="°C to °F"
         />
-        <p class="exact-temp" id="exact-temp-id">20°</p>
-        <span class="details-exact-day"
-          >wind: <span id="wind">10</span>km\h<br />humidity:
-          <span id="humidity">42</span>%
-        </span>
-        <footer class="made-by">
-          App was made by
-          <a
-            href="https://github.com/takifug4/weather-app"
-            target="_blank"
-            class="link-by"
-            >takifug4</a
-          >
-        </footer>
-        <!-- <div class="container">
+      </form>
+      <p class="exact-temp" id="exact-temp-id">20°</p>
+      <span class="details-exact-day"
+        >wind: <span id="wind">10</span>km\h<br />humidity:
+        <span id="humidity">42</span>%
+      </span>
+      <!-- <div class="container">
           <div class="day">
             Tomorrow<br /><span class="next-temp">20°</span><br /><span
               class="next-weather"
@@ -100,7 +93,15 @@
             ></span>
           </div>
         </div> -->
-      </div>
+      <footer class="made-by">
+        App was made by
+        <a
+          href="https://github.com/takifug4/weather-app"
+          target="_blank"
+          class="link-by"
+          >takifug4</a
+        >
+      </footer>
     </div>
     <script src="index.js"></script>
   </body>
