@@ -51,6 +51,13 @@
     font-size: 54px;
 }
 
+.current-date {
+    position: relative;
+    bottom: 60px;
+    text-align: right;
+    margin: 0px 52px;
+}
+
 .current-time {
     position: relative;
     bottom: 60px;

@@ -13,6 +13,7 @@
     }
   });
 })(); */
+
 //                                                SEARCHABLE INNERHTML TEMP + FARENHEIT
 function showTemperature(response) {
   let windOne = document.querySelector("#wind");
@@ -106,20 +107,36 @@ function geoFun() {
 document.querySelector("#geoguesser-id").addEventListener("click", geoFun);
 
 //                                        current date on site NEED TO IMPROOVE
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
 
-let day = days[now.getDay()];
-let currentTime = document.querySelector("#time");
-currentTime.innerHTML = `${day}, ${now.getHours()}:${now.getMinutes()}`;
+function workingClock() {
+  let now = new Date();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[now.getDay()];
+  let currentDay = document.querySelector("#cur-date");
+  let currentTime = document.querySelector("#time");
+  currentDay.innerHTML = `${day}`;
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  currentTime.innerHTML = `${hours}:${minutes}`;
+  setTimeout("workingClock()", 1000);
+}
+
+workingClock();
 
 //                     alert functions kinda old and usefull for web project but still i can reread and take some advices from here. TO DELETE LATER
 /* let city = prompt("Enter a city");
