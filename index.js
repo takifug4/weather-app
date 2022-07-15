@@ -1,28 +1,22 @@
-//                                 clear farenheit changer with fake data
-/* let thatTemp = document.querySelector("#exact-temp-id");
-(function () {
-  var count = 0;
-  document.querySelector(".tempButton").addEventListener("click", function () {
-    if (count == 0) {
-      let farTemp = 20 * 1.8 + 32;
-      thatTemp.innerHTML = `${farTemp}°F`;
-      count++;
-    } else if (count == 1) {
-      thatTemp.innerHTML = `20°`;
-      count = 0;
-    }
-  });
-})(); */
-
 //                                                SEARCHABLE INNERHTML TEMP + FARENHEIT
 function showTemperature(response) {
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
   let windOne = document.querySelector("#wind");
   let currentWind = Math.round(response.data.wind.speed);
   windOne.innerHTML = currentWind;
+
   console.log(response);
+
   let humidityOne = document.querySelector("#humidity");
   let currentHumidity = Math.round(response.data.main.humidity);
   humidityOne.innerHTML = currentHumidity;
+
   let thatTemp = document.querySelector("#exact-temp-id");
   let temperature = Math.round(response.data.main.temp);
   thatTemp.innerHTML = `${temperature}°`;
@@ -51,6 +45,9 @@ function searching(event) {
   let searchingInput = document.querySelector("#search-tool");
   let thatCity = document.querySelector("#city-in-question");
   thatCity.innerHTML = searchingInput.value;
+  if (searchingInput.value.length == 0) {
+    thatCity.innerHTML = "Kyiv";
+  }
   let apiKey = `8d2d1c8840407c6b6f6d05d74b3f12c9`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchingInput.value}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showTemperature);
@@ -137,6 +134,14 @@ function workingClock() {
 }
 
 workingClock();
+
+function searchingDefault() {
+  let defaultCity = "Kyiv";
+  let apiKey = `8d2d1c8840407c6b6f6d05d74b3f12c9`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&units=metric&appid=${apiKey}`;
+  axios.get(`${apiUrl}`).then(showTemperature);
+}
+searchingDefault();
 
 //                     alert functions kinda old and usefull for web project but still i can reread and take some advices from here. TO DELETE LATER
 /* let city = prompt("Enter a city");

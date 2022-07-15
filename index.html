@@ -40,14 +40,15 @@
           id="search-tool"
           placeholder="Type a city"
         />
-        <button class="search-one">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <span
+          ><button class="search-one">
+            <i class="fa-solid fa-magnifying-glass"></i></button
+        ></span>
       </form>
-      <h2 class="current-city" id="city-in-question">Current City</h2>
-      <p class="current-date" id="cur-date">
-        Date <div class="current-time" id="time">Time</div>
-      </p>
+      <h2 class="current-city" id="city-in-question">Kyiv</h2>
+      <p class="current-date" id="cur-date">Date</p>
+      <div class="current-time" id="time">Time</div>
+
       <form id="temp-changer-button">
         <input
           type="button"
@@ -56,11 +57,15 @@
           value="°C to °F"
         />
       </form>
-      <p class="exact-temp" id="exact-temp-id"><span class='weather-emoji' id='weather-emoji-id'></span>20°</p>
+      <div class="emoji-current">
+        <img src=" " id="icon" width="88px" />
+      </div>
+      <div class="exact-temp" id="exact-temp-id">20°</div>
       <span class="details-exact-day"
         >wind: <span id="wind">10</span>km\h<br />humidity:
         <span id="humidity">42</span>%
       </span>
+
       <!-- <div class="container">
           <div class="day">
             Tomorrow<br /><span class="next-temp">20°</span><br /><span
